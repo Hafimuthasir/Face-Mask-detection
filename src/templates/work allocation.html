@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'admin index.html'%}
+{% block body %}
+
+
+<body>
+<div align="center" >
+  <p>&nbsp;</p>
+  <table width="600" border="1" id="customers">
+    <tr>
+      <th width="50" height="50"><div align="center">Work</div></th>
+      <th width="20"><div align="center">Name</div></th>
+      <th width="20"><div align="center">Date</div></th>
+      <th width="20"><div align="center">Status</div></th>
+      <th><div align="center"></div></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td height="145"><div align="center">{{i[3]}}</div></td>
+      <td><div align="center">{{i[0]}}</div></td>
+      <td><div align="center">{{i[5]}}</div></td>
+      <td><div align="center">{{i[6]}}</div></td>
+       <td width="53"><div align="center"><a href="workallocationdelete?work_id={{i[1]}}">delete</a></div></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+<div align="center">
+
+<br>
+  <table width="200" border="0">
+    <tr>
+      <td><form id="form1" name="form1" method="post" action="/work_allocation2#services">
+        <label>
+          <div align="center">
+            <input type="submit" name="Submit" value="ADD NEW" />
+            </div>
+          </label>
+        </form>      </td>
+    </tr>
+  </table>
+</div>
+</body>
+{%endblock%}
+<!--</html>-->

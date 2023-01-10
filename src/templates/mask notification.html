@@ -1,0 +1,28 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'admin index.html'%}
+{% block body %}
+<body>
+<div align="center">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th height="45"><div align="center">Image</div></th>
+      <th height="45"><div align="center">Name</div></th>
+      <th><div align="center">Date</div></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td height="64"><div align="center"><a href="static/pic/{{i[2]}}"><img src="static/pic/{{i[2]}}" width="100px" height="100px"/></a> </div></td>
+      <td>{{i[5]}} {{i[6]}}</td>
+      <td><div align="center">{{i[1]}}</div></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</body>
+{%endblock%}
+<!--</html>-->

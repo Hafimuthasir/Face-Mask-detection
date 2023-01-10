@@ -1,0 +1,38 @@
+
+{% extends 'admin index.html'%}
+{%block body%}
+<br>
+<br><br><br>
+<body>
+<div align="center">
+  <table width="1200" height="119" border="1" id="customers">
+    <tr>
+      <th width="100"><div align="center">Name</div></th>
+      <th width="100"><div align="center">Gender</div></th>
+      <th width="100"><div align="center">Qualification</div></th>
+      <th width="100"><div align="center">Mail</div></th>
+      <th width="100"><div align="center">Phone number </div></th>
+      <th width="100"><div align="center">Image</div></th>
+      <th width="100"><div align="center"></div></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td><div align="center">{{i[2]}} {{i[3]}}</div></td>
+      <td><div align="center">{{i[4]}}</div></td>
+      <td><div align="center">{{i[6]}}</div></td>
+      <td><div align="center">{{i[9]}}</div></td>
+      <td><div align="center">{{i[8]}}</div></td>
+      <td><div align="center"><img src="static/uploads/{{i[10]}}" width="100px" height="100px"/> </div></td>
+      <td><div align="center"><a href="staffdelete?id={{i[1]}}">delete</a></div></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <form id="form1" name="form1" method="post" action="/staff_registration#services">
+    <label>
+    <input type="submit" name="Submit" value="ADD NEW" />
+    </label>
+  </form>
+</div>
+</body>
+{%endblock%}

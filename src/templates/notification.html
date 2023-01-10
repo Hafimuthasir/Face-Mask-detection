@@ -1,0 +1,36 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'admin index.html'%}
+{% block body %}
+<body>
+<table width="500" height="180" border="1" align="center" id="customers">
+  <tr>
+    <th width="300" ><div align="center">Notification</div></th>
+    <th width="200" ><div align="center">Date</div></th>
+    <td ><div align="center"></div></td>
+  </tr>
+  <tr>
+   {% for i in val %}
+    <td ><div align="center">{{i[1]}}</div></td>
+    <td><div align="center">{{i[2]}}</div></td>
+	<td width="200"><div align="center"><a href="notificationdelete?nid={{i[0]}}">delete</a></div></td>
+  </tr>
+ {% endfor %}
+  <tr>
+
+    <td colspan="3"><div align="center"> <form id="form1" name="form1" method="post" action="notification2#services">
+              <label>
+              <input type="submit" name="Submit" value="ADD NEW" />
+              </label>
+            </form></div></td>
+  </tr>
+</table>
+<div align="center"></div>
+<div align="center"></div>
+</body>
+{% endblock %}
+<!--</html>-->

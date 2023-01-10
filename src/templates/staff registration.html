@@ -1,0 +1,91 @@
+
+{% extends 'admin index.html'%}
+{% block body %}
+<body>
+<form action="addstaff" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div align="center">
+    <table width="285" border="0" id="customers">
+      <tr>
+        <td width="71">first name </td>
+        <td width="198"><label>
+          <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}"/>
+          </td>
+      </tr>
+      <tr>
+        <td>last name </td>
+        <td><label>
+          <input type="text" name="textfield2" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>gender</td>
+        <td><label>
+          <input name="radiobutton" type="radio" value="male"checked>male
+          </label>
+          <label>
+          <input name="radiobutton" type="radio" value="female" />
+          female</label></td>
+      </tr>
+      <tr>
+        <td>date of birth </td>
+        <td><label>
+          <input type="date" name="textfield3" min="1990-01-01" max="2019-12-31" required/>
+        </label></td>
+      </tr>
+      <tr>
+        <td>qualification</td>
+        <td><label>
+          <input type="checkbox" name="checkbox" value="degree" />
+          degree
+          <input type="checkbox" name="checkbox2" value="pg" />
+        pg</label></td>
+      </tr>
+      <tr>
+        <td>post</td>
+        <td><label>
+          <input type="text" name="textfield4"pattern="[A-Z a-z.]{3,25}" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td><label>
+          <input type="text" name="textfield5"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>phone no </td>
+        <td><label>
+          <input type="text" name="textfield6"required pattern="[6789][0-9]{9}" />
+        </label></td>
+      </tr>
+      <tr>
+        <td>photo</td>
+        <td><label>
+          <input type="file" name="file"required />
+        </label></td>
+      </tr>
+      <tr>
+        <td>user name </td>
+        <td><label>
+          <input type="text" name="textfield7"required />
+        </label></td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td><label>
+          <input type="password" name="textfield8"required />
+        </label></td>
+      </tr>
+      <tr>
+        <td colspan="2"><div align="center">
+          <label>
+          <input type="submit" name="Submit" value="signup" />
+          </label>
+        </div></td>
+      </tr>
+      </table>
+  </div>
+</form>
+</body>
+{% endblock %}
+<!--</html>-->
